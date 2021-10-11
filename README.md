@@ -8,4 +8,5 @@ Equipo:
 
 Practica 5: Planeación de Recursos
 - 📁 __Practica 5__:
-  +[Practica 5]
+  +[Diagrama de Gantt](sem_ing_soft_21b_d01_p5_Chávez_Salado_Francisco_Javier.pdf)
+  +[Diagrama de Pert](sem_ing_soft_21b_d01_p5_Chávez_Salado_Francisco_Javier_2.pdf)
