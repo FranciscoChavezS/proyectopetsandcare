@@ -14,4 +14,4 @@ Practica 5: Planeación de Recursos
 
 - 📁 __Practica 6__:
 
-[Casos de Uso](sem_ing_soft_21b_d01_p6_Chávez_Salado_Francisco_Javier.pdf)
+  -[Casos de Uso](sem_ing_soft_21b_d01_p6_Chávez_Salado_Francisco_Javier.pdf)
