@@ -6,13 +6,11 @@ Equipo:
 - Chávez Salado Francisco Javier
 - Ramírez Rojas Judith Samara
 
-Práctica 5: Planeación de Recursos
-- 📁 __Práctica 5__:
+- 📁 __Práctica 5__: __Planeación de Recursos__
   
   -[Diagrama de Gantt](sem_ing_soft_21b_d01_p5_Chávez_Salado_Francisco_Javier.pdf)
   -[Diagrama de Pert](sem_ing_soft_21b_d01_p5_Chávez_Salado_Francisco_Javier_2.pdf)
 
-Práctica 6: Casos de Uso
-- 📁 __Practica 6__:
+- 📁 __Practica 6__: __Casos de Uso__
 
   -[Casos de Uso](sem_ing_soft_21b_d01_p6_Chávez_Salado_Francisco_Javier.pdf)
