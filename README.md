@@ -13,4 +13,4 @@ Practica 5: Planeación de Recursos
   -[Diagrama de Pert](sem_ing_soft_21b_d01_p5_Chávez_Salado_Francisco_Javier_2.pdf)
 
 - 📁 __Practica 6__:
-  -[Casos de Uso](sem_ing_soft_21b_d01_p6_Chávez_Salado_Francisco_Javier.pdf)
++ [Casos de Uso](sem_ing_soft_21b_d01_p6_Chávez_Salado_Francisco_Javier.pdf)
