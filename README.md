@@ -18,6 +18,6 @@ Actividades
 
 - 📁 __Practica 7__: __Diseño Estructural__
 
- -[Diseño Estructural](sem_ing_soft_21b_d01_p7_Chávez_Salado_Francisco_Javier.pdf)
+   -[Diseño Estructural](sem_ing_soft_21b_d01_p7_Chávez_Salado_Francisco_Javier.pdf)
  
  
