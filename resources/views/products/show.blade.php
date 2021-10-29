@@ -22,37 +22,26 @@
             <div class="card-body">
               <div class="row">
                 <!-- Primero -->
-                <div class="col-md-4">
-                  <div class="card card-user">
-                    <div class="card-body">
-                      <p class="card-text">
-                        <div class="author">
-                          <div class="block block-one"></div>
-                          <div class="block block-two"></div>
-                          <div class="block block-three"></div>
-                          <div class="block block-four"></div>
-                          <a href="#">
-                            <img src="{{ asset($product->photo)}}" alt="" width="150" class="img-fluid img-thumbnail">
-                            <h5 class="title mt-3">{{ $product->name }}</h5>
-                          </a>
-                          <p class="description">
-                            Precio $ {{ $product->price }} <br>
-                            Creación del producto: {{ $product->created_at }}
-                          </p>
-                        </div>
-                      </p>
-                      <div class="card-description">
-                        {{ $product->description }} <br>
-                      </div>
+                <div class="col-md-4 col-12 justify-content-center mb-5">
+                  <div class="card m-auto" style="width: 18rem;">
+                    <img src="{{ asset($product->photo)}}" class="card-img-top" alt="">
+                      <div class="card-body">
+                        <h3 class="card-title my-2">{{ $product->name }}</h3>
+                        <h5 class="card-title my-2">Precio: $ {{ $product->price }}</h5>
+                      <div class="d-card-text">
+                      {{ $product->description }}
                     </div>
-                    <div class="card-footer">
-                      <div class="button-container">
-                        <a href="{{ route('products.index') }}" class="btn btn-sm btn-success mr-3"> Volver </a>
-                        <a href="{{ route('products.edit', $product->id) }}" class="btn btn-sm btn-primary">Editar</a>
+                    <a href="{{ route('products.show', $product->id) }}" class="post-link"><b>Ver: {{ $product->name }}</b></a>
+                    <hr>
+                    <div class="row">
+                      <div class="col-6 text-right">
+                      <a href="{{ route('products.show', $product->id) }}" class="btn btn-icon btn-3 btn btn-outline-secondary" type="button"
+                      aria-pressed="true">Agregar Carrito</a>
                       </div>
                     </div>
                   </div>
-                </div>
+              </div>
+            </div>
                 <!--Fin de primero-->
               </div>
               <!--fin de fila-->

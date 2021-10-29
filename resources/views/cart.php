@@ -1,17 +1,11 @@
-@extends('layouts.main', ['activePage' => 'shop', 'titlePage' => __('Conoce nuestros productos')])
+@extends('layouts.main', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
 
 @section('content')
-    <div class="content">
-      <div class="col-md-12">
-      <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Shop</li>
-            </ol>
-        </nav>
-      <div class="container-fluid">
+<div class="content">
+    <div class="container-fluid">
         <div class="row">
-    @foreach($products as $product)
+
+        @foreach($products as $product)
           <div class="col-md-4 col-12 justify-content-center mb-5">
             <div class="card m-auto" style="width: 18rem;">
                 <img src="{{ asset($product->photo)}}" class="card-img-top" alt="">
@@ -25,8 +19,6 @@
                   <hr>
                   <div class="row">
                     <div class="col-6 text-right">
-                    <a href="{{ route('products.show', $product->id) }}" class="btn btn-icon btn-3 btn btn-outline-secondary" type="button"
-                    aria-pressed="true">Detalle</a>
                     </div>
                   </div>
                 </div>
@@ -35,6 +27,4 @@
       @endforeach
         </div>
     </div>
-  </div>
 </div>
-@endsection

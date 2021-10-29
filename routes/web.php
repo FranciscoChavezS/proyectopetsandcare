@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArchivoController;
+use App\Http\Controllers\ProductsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,5 +46,9 @@ Route::group(['middleware' => 'auth'], function() {
     //Rutas para productos 
     Route::resource('products', App\Http\Controllers\ProductsController::class);
     Route::get('/shop', [App\Http\Controllers\ShopController::class, 'index'])->name('shop');
+
+    //Carrrito de compras
+    Route::get('/cart', [App\Http\Controllers\ProductsController::class, 'cart'])->name('cart');
+    Route::get('/add-to-cart', [App\Http\Controllers\ProductsController::class, 'addToCart'])->name('add-to-cart');
 
 });

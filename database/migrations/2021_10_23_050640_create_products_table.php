@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->string('photo')->nullable();
             $table->decimal('price');
+            $table->integer('stock');
+            $table->string('type', 15);
             $table->timestamps();
         });
     }

@@ -44,6 +44,8 @@ class ProductsController extends Controller
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
+        $product->stock = $request->stock;
+        $product->type = $request->type;
 
         //Guardar ruta de imagen en BD 
         if($request->hasFile('photo')){
@@ -103,6 +105,8 @@ class ProductsController extends Controller
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
+        $product->stock = $request->stock;
+        $product->type = $request->type;
 
         //Actualizar foto
         if($request->hasFile('photo')){
@@ -133,6 +137,51 @@ class ProductsController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')->with('mensajeProduct','Registro eliminado correctamente');
+    }
+
+    public function cart(){
+
+        return view('cart');
+    }
+
+
+    public function addToCart($id){
+
+        $product = Product::find($id);
+        $cart = session()->get('cart');
+
+        if(!$cart){
+
+            $cart = [
+                $id =>[
+                    "name" => $product->name,
+                    "quantity" => 1,
+                    "photo" => $product->photo,
+                    "price" => $product->price,
+
+                ]
+            ];
+            session()->put('cart', $cart);
+            return redirect()->back()->with('successCart', 'Producto añadido al carrito correctamente');       
+        }
+        if(isset($cart[$id])){
+
+            $cart[$id]['quantity']++;
+
+            session()->put('cart', $cart);
+
+            return redirect()->back()->with('successCart','Producto añadido al carrito correctamente');
+        }
+        $cart[$id] = [
+            "name" => $product->name,
+            "quantity" => 1,
+            "photo" => $product->photo,
+            "price" => $product->price,
+        ];
+        
+        session()->put('cart', $cart);
+        return redirect()->back()->with('successCart', 'Producto añadido al carrito correctamente');       
+
     }
 }
 
