@@ -20,4 +20,8 @@ Actividades
 
    -[Diseño Estructural](sem_ing_soft_21b_d01_p7_Chávez_Salado_Francisco_Javier.pdf)
  
+ - 📁 __Practica 8__: __Diseño de Integración__
+
+   -[Diseño de Integración](sem_ing_soft_21b_d01_p8_Chávez_Salado_Francisco_Javier.pdf)
+ 
  
