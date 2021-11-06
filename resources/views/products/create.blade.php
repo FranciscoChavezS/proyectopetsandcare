@@ -63,10 +63,10 @@
               <div class="row">
                 <label for="stock" class="col-sm-2 col-form-label">Cantidad de Almacen</label>
                 <div class="col-sm-7">
-                <input type="number" value="1" step='1' id='stock' name="stock" class="form-control" required>
-                    <!--Validaciones-->
-                    @if($errors->has('Stock'))
-                      <span class="error text-danger" for="input-name">{{ $errors->first('price') }}</span>
+                <input type="number" value="{{ isset($product) ? $product->stock : ""}}" step='0.01' id='stock' name="stock" class="form-control" required>                    
+                <!--Validaciones-->
+                    @if($errors->has('stock'))
+                      <span class="error text-danger" for="input-name">{{ $errors->first('stock') }}</span>
                     @endif
                 </div>
               </div>
@@ -78,8 +78,8 @@
                       <option value='service'>Mascota</option>
                     </select>
                     <!--Validaciones-->
-                    @if($errors->has('Stock'))
-                      <span class="error text-danger" for="input-name">{{ $errors->first('price') }}</span>
+                    @if($errors->has('type'))
+                      <span class="error text-danger" for="input-name">{{ $errors->first('type') }}</span>
                     @endif
                 </div>
               </div>

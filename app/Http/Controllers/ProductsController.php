@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Cart;
 
 class ProductsController extends Controller
 {
@@ -141,7 +142,8 @@ class ProductsController extends Controller
 
     public function cart(){
 
-        return view('cart');
+        $products = Product::paginate(10);
+        return view('products.cart', compact('products'));
     }
 
 

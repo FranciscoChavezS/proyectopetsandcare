@@ -80,7 +80,7 @@
                       <option value='service'>Mascota</option>
                     </select>
                     <!--Validaciones-->
-                    @if($errors->has('Stock'))
+                    @if($errors->has('type'))
                       <span class="error text-danger" for="input-name">{{ $errors->first('type') }}</span>
                     @endif
                 </div>

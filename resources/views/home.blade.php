@@ -25,7 +25,7 @@
             <div class="card m-auto" style="width: 18rem;">
                 <img src="{{ asset($post->foto)}}" class="card-img-top" alt="">
                 <div class="card-body">
-                  <small class="card-txt-category">Ultima vez visto: {{ $post->fecha }}</small>
+                  <small class="card-txt-category">Situación: {{ $post->fecha }}</small>
                   <h3 class="card-title my-2">{{ $post->title }}</h3>
                   <h5 class="card-title my-2">Raza: {{ $post->raza }}</h5>
                   <div class="d-card-text">

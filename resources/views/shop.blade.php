@@ -21,12 +21,18 @@
                   <div class="d-card-text">
                     {{ $product->description }}
                   </div>
-                  <a href="{{ route('products.show', $product->id) }}" class="post-link"><b>Ver: {{ $product->name }}</b></a>
                   <hr>
                   <div class="row">
                     <div class="col-6 text-right">
-                    <a href="{{ route('products.show', $product->id) }}" class="btn btn-icon btn-3 btn btn-outline-secondary" type="button"
-                    aria-pressed="true">Detalle</a>
+                    <form action="{{ route('products.store') }}" method="post">
+                                @csrf
+                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="price" value="{{ $product->price }}">
+                                <div class="card-footer ml-auto mr-auto">
+                                  <button type="submit" class="btn btn-primary">Agregar al Carrito</button>
+                                </div>
+                            </form>
                     </div>
                   </div>
                 </div>

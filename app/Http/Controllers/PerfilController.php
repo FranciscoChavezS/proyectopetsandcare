@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
+use Intervention\Image\Facades\Image;
+
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UserEditRequest;
-
-use Spatie\Permission\Models\Role;
-
-use Illuminate\Http\Request;
 
 class PerfilController extends Controller
 {
@@ -57,6 +57,21 @@ class PerfilController extends Controller
         
         $user->update($data);
         return redirect()->route('perfil', $user->id)->with('success', 'Usuario actualizado correctamente');
+    }
+    public function update_avatar(Request $request)
+    {
+        
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename2 = time() . '.' . $avatar->getClientOriginalExtension();
+            Image::make($avatar)->resize(300,300)->save(public_path('/images/perfil/'.$filename2));
+            
+            $user = Auth::user();
+            $user->avatar = $filename2;
+            $user->save();
+        }
+
+        return redirect()->route('perfil', array('user' => Auth::user()))->with('success', 'Foto actualizada correctamente');
     }
     
 }

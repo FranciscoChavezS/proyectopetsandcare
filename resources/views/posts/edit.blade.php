@@ -40,10 +40,12 @@
                 </div>
               </div>
               <div class="row">
-                <label for="fecha" class="col-sm-2 col-form-label">Fecha</label>
+                <label for="fecha" class="col-sm-2 col-form-label">Situación</label>
                 <div class="col-sm-7">
-                  <input type="date" class="form-control" name="fecha" 
-                    value="{{ old('fecha', $post->fecha) ?? ''}}" autocomplete="off" autofocus>
+                    <select class='form-control' name="fecha" id="fecha" >
+                      <option value='Adopción'>Adopción</option>
+                      <option value='Extraviado'>Extraviado</option>
+                    </select>
                     <!--Validaciones-->
                     @if($errors->has('fecha'))
                       <span class="error text-danger" for="input-name">{{ $errors->first('fecha') }}</span>

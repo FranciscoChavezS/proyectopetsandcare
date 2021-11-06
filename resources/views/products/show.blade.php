@@ -30,13 +30,8 @@
                         <h5 class="card-title my-2">Precio: $ {{ $product->price }}</h5>
                       <div class="d-card-text">
                       {{ $product->description }}
-                    </div>
-                    <a href="{{ route('products.show', $product->id) }}" class="post-link"><b>Ver: {{ $product->name }}</b></a>
-                    <hr>
-                    <div class="row">
-                      <div class="col-6 text-right">
-                      <a href="{{ route('products.show', $product->id) }}" class="btn btn-icon btn-3 btn btn-outline-secondary" type="button"
-                      aria-pressed="true">Agregar Carrito</a>
+                      <div class="d-flex justify-content-center">
+                                                    
                       </div>
                     </div>
                   </div>

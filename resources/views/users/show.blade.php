@@ -23,12 +23,14 @@
                   <div class="card">
                     <div class="card-body">
                       <div class="d-flex flex-column align-items-center text-center">
-                        <img src="{{ asset('/img/default-avatar.png') }}" alt="Admin" class="rounded-circle" width="150">
-                        <div class="mt-3">
-                          <h4>{{ $user->name }}</h4>
-                          <p class="text-secondary mb-1">{{ $user->username }}</p>
-                          <p class="text-muted font-size-sm">{{ $user->email }}</p>
-                          <a href="{{ route('home') }}" class="btn btn-primary">Volver</a>
+                      <img src="/images/perfil/{{ Auth::user()->avatar}}" alt="Admin" class="rounded-circle" width="150">
+                        <form action="{{ route('perfil') }}" enctype="multipart/form-data" method="POST">
+                            @csrf
+                            <label>Actualizar foto</label>
+                            <input type="file" name="avatar" class="card-img-top">
+                          <div class="mt-3">
+                          <input type="submit" class="btn btn-primary" value="Cambiar">
+                        </form>
                           <!-- <a href="#"class="btn btn-outline-primary">Cambiar imagen</a> -->
                         </div>
                       </div>

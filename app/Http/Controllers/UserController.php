@@ -88,7 +88,7 @@ class UserController extends Controller
         }
         
         $user->update($data);
-        return redirect()->route('users.show', $user->id)->with('success', 'Usuario actualizado correctamente');
+        return redirect()->route('perfil', $user->id)->with('success', 'Usuario actualizado correctamente');
     }
 
     public function destroy(User $user)

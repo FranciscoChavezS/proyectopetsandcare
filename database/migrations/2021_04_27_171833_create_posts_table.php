@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('foto');
-            $table->date('fecha');
+            $table->string('fecha');
             $table->string('telefono');
             $table->string('raza');
             $table->text('comentario');
