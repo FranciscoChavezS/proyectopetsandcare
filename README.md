@@ -24,4 +24,7 @@ Actividades
 
    -[Diseño de Integración](sem_ing_soft_21b_d01_p8_Chávez_Salado_Francisco_Javier.pdf)
  
+  - 📁 __Practica 9__: __Diseño Lógico-Físico__
+
+   -[Diseño de Lógico-Físico](sem_ing_soft_21b_d01_p9_Chávez_Salado_Francisco_Javier.pdf)
  
