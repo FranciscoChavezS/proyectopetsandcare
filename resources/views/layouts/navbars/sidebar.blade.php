@@ -86,7 +86,7 @@
       <li class="nav-item{{ $activePage == 'donar' ? ' active' : '' }}">
         <a class="nav-link" href="{{ url('/paypal/pay') }}">
           <i class="material-icons">attach_money</i>
-          <p>{{ __('Donar') }}</p>
+          <p>{{ __('Donar/Pagar') }}</p>
         </a>
       </li>
     </ul>

@@ -37,6 +37,11 @@
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                   </tr>
                   <tr>
+                    <td>Pagar un producto </td>
+                    <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                    <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                  </tr>
+                  <tr>
                     <td>Ayudar a los animales sin hogar (Comida,Medicina,Adopción)</td>
                     <td class="text-center"><i class="fa fa-times text-danger"></i></td>
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>

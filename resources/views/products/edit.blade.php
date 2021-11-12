@@ -72,19 +72,6 @@
                     @endif
                 </div>
               </div>
-              <div class="row">
-                <label for="type" class="col-sm-2 col-form-label">Tipo de registro</label>
-                <div class="col-sm-7">
-                    <select class='form-control' name="type" id="type" value="{{ old('type', $product->type) ?? ''}}">
-                      <option value='product'>Producto</option>
-                      <option value='service'>Mascota</option>
-                    </select>
-                    <!--Validaciones-->
-                    @if($errors->has('type'))
-                      <span class="error text-danger" for="input-name">{{ $errors->first('type') }}</span>
-                    @endif
-                </div>
-              </div>
             </div>
             <!--End body-->
             <!--Footer-->

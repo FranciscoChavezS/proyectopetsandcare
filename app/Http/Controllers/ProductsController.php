@@ -46,7 +46,6 @@ class ProductsController extends Controller
         $product->description = $request->description;
         $product->price = $request->price;
         $product->stock = $request->stock;
-        $product->type = $request->type;
 
         //Guardar ruta de imagen en BD 
         if($request->hasFile('photo')){
@@ -107,7 +106,6 @@ class ProductsController extends Controller
         $product->description = $request->description;
         $product->price = $request->price;
         $product->stock = $request->stock;
-        $product->type = $request->type;
 
         //Actualizar foto
         if($request->hasFile('photo')){
@@ -143,7 +141,7 @@ class ProductsController extends Controller
     public function cart(){
 
         $products = Product::paginate(10);
-        return view('products.cart', compact('products'));
+        return view('cart', compact('products'));
     }
 
 
@@ -152,11 +150,13 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $cart = session()->get('cart');
 
+        //Si el carrito está vacío, este es el primer producto
         if(!$cart){
 
             $cart = [
                 $id =>[
                     "name" => $product->name,
+                    "description" => $product->description,
                     "quantity" => 1,
                     "photo" => $product->photo,
                     "price" => $product->price,
@@ -166,6 +166,7 @@ class ProductsController extends Controller
             session()->put('cart', $cart);
             return redirect()->back()->with('successCart', 'Producto añadido al carrito correctamente');       
         }
+        //Si el carrito no está vacío, verifica si este producto existe y luego incremente la cantidad.
         if(isset($cart[$id])){
 
             $cart[$id]['quantity']++;

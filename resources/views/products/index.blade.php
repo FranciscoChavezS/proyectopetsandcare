@@ -35,7 +35,6 @@
                   <th> Descripción </th>
                   <th> Precio </th>
                   <th> Stock </th>
-                  <th> Tipo </th>
                   <th> Fecha de creación </th>
                   <th class="text-right"> Acciones </th>
                 </thead>
@@ -50,7 +49,6 @@
                     <td>{{ $product->description }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->stock }}</td>
-                    <td>{{ $product->type }}</td>
                     <td class="text-primary">{{ $product->created_at->toFormattedDateString() }}</td>
                     <td class="td-actions text-right">
                       <a href="{{ route('products.edit', $product->id) }}" class="btn btn-success"> <i

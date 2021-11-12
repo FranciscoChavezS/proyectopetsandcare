@@ -13,8 +13,8 @@
       <div class="col-md-12">
       <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('shop') }}">Shop</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Home</li>
+                <li class="breadcrumb-item active"><a href="{{ route('shop') }}">shop</a></li>
             </ol>
         </nav>
       <div class="container-fluid">

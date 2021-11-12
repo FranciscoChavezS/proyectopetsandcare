@@ -49,7 +49,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/shop', [App\Http\Controllers\ShopController::class, 'index'])->name('shop');
 
     //Carrrito de compras
-    Route::resource('carts', App\Http\Controllers\CartController::class);
-    Route::resource('/Cart', CartController::class);
+    Route::post('/add-to-cart/{id}', [ProductsController::class,'addToCart'])->name('products.addToCart');
+    Route::get('/cart', [ProductsController::class,'cart'])->name('products.cart');
+
     
 });
