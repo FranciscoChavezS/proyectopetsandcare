@@ -14,7 +14,7 @@
       <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active" aria-current="page">Home</li>
-                <li class="breadcrumb-item active"><a href="{{ route('shop') }}">shop</a></li>
+                <li class="breadcrumb-item active"><a href="{{ route('shop') }}">Shop</a></li>
             </ol>
         </nav>
       <div class="container-fluid">

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ArchivoController;
+use App\Http\Controllers\CitasController;
 use App\Http\Controllers\ProductsController;
 
 
@@ -51,6 +52,9 @@ Route::group(['middleware' => 'auth'], function() {
     //Carrrito de compras
     Route::post('/add-to-cart/{id}', [ProductsController::class,'addToCart'])->name('products.addToCart');
     Route::get('/cart', [ProductsController::class,'cart'])->name('products.cart');
+
+    //RUTA CITA
+    Route::resource('citas', App\Http\Controllers\CitasController::class);
 
     
 });

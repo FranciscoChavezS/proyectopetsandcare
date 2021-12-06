@@ -43,7 +43,11 @@
                 @endforeach
                 {{$suma}} MXN 
                 </td>
+                <td>
+                      <a class="btn btn-success" href="{{ route('pay') }}">Pagar </a>
+                </td>
               </table>
+                   
               {{-- {{ $users->links() }} --}}
                 </div>
             </div>

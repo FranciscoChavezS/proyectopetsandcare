@@ -30,6 +30,14 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('products.cart') }}">
+            <i class="material-icons">shopping_cart</i>
+            <p class="d-lg-none d-md-block">
+              {{ __('Stats') }}
+            </p>
+          </a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="#" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <img src="/images/perfil/{{ Auth::user()->avatar}}" alt="Admin" class="rounded-circle" width="40"> {{ Auth::user()->name }}

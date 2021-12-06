@@ -28,7 +28,7 @@
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('perfil') }}">
-                <span class="sidebar-mini"> PE </span>
+                <i class="material-icons"> face </i>
                 <span class="sidebar-normal">{{ __('Perfil') }} </span>
               </a>
             </li>
@@ -40,7 +40,7 @@
             </li>
             <li class="nav-item{{ $activePage == 'posts' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('posts.index') }}">
-                <i class="material-icons">library_books</i>
+                <i class="material-icons">pets</i>
                 <p>{{ __('Post') }}</p>
               </a>
             </li>
@@ -52,6 +52,13 @@
               </a>
             </li>
             @endcan
+            <li class="nav-item{{ $activePage == 'citas' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('citas.index') }}">
+                <i class="material-icons">calendar_today</i>
+                <p>{{ __('Citas') }}</p>
+              </a>
+            </li>
+            
           </ul>
         </div>
       </li>
